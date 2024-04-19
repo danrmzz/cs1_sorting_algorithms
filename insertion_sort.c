@@ -51,6 +51,9 @@ void insertionSort(int arr[], int n) {
             else
                 break; // arr[j] is already in correct place and all its previous items are already sorted in reference to the item in your hand
         }
-        arr[j+1] = hand;
+        /* If the loop breaks for j becoming -1, we put the item in 0. Otherwise,
+        the loop is breaking for the break statement. Put the item in hand after j (the
+        remaining items were shifted forward already, if needed. */
+        arr[j+1] = hand; 
     }
 }
